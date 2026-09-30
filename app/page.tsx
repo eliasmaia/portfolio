@@ -1,69 +1,239 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import { content, Language } from '@/data/content';
 
 export default function Home() {
+  const [lang, setLang] = useState<Language>('pt');
+  const t = content[lang];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="min-h-screen bg-slate-950 text-white">
+      {/* HEADER / NAVBAR */}
+      <header className="border-b border-slate-800">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+          <a
+            href="#home"
+            className="text-xl font-bold tracking-tight"
+          >
+            Elias Maia
+            <span className="text-teal-400">.dev</span>
+          </a>
+
+          {/* Languages Alternator */}
+          <div className="flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900 p-1">
+            <button
+              type="button"
+              onClick={() => setLang('pt')}
+              className={`rounded-full px-3 py-1 font-medium transition-colors ${
+                lang === 'pt'
+                  ? 'bg-teal-500 text-slate-950'
+                  : 'text-slate-400 hover:text-white'
+              }`}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              PT
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setLang('en')}
+              className={`rounded-full px-3 py-1 font-medium transition-colors ${
+                lang === 'en'
+                  ? 'bg-teal-500 text-slate-950'
+                  : 'text-slate-400 hover:text-white'
+              }`}
             >
-              Learning
-            </a>{" "}
-            center.
+              EN
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center px-6 py-20"
+      >
+        <div className="max-w-4xl">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-teal-400">
+            {t.hero.role}
           </p>
+
+          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            {t.hero.headline}
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+            {t.hero.subtext}
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-lg bg-teal-500 px-6 py-3 font-semibold text-slate-950 transition-colors hover:bg-teal-400"
+            >
+              {t.hero.ctaProjects}
+            </a>
+
+            <a
+              href="#contact"
+              className="rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white transition-colors hover:border-teal-500 hover:text-teal-400"
+            >
+              {t.hero.ctaContact}
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+      </section>
+
+      {/* PROJETOS SECTION */}
+      <section
+        id="projects"
+        className="border-t border-slate-800 bg-slate-900/40 px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            {t.projects.title}
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {t.projects.items.map((project, index) => (
+              <article
+                key={`${project.title}-${index}`}
+                className="rounded-2xl border border-slate-800 bg-slate-950 p-6 transition-colors hover:border-slate-700"
+              >
+                <p className="text-sm font-medium text-teal-400">
+                  {project.category}
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold">
+                  {project.title}
+                </h3>
+
+                <p className="mt-4 leading-relaxed text-slate-400">
+                  {project.description}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tech.map((tech, tIndex) => (
+                    <span
+                      key={`${tech}-${tIndex}`}
+                      className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {(project.linkLive || project.linkGithub) && (
+                  <div className="mt-6 flex flex-wrap gap-4">
+                    {project.linkLive && (
+                      <a
+                        href={project.linkLive}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-teal-400 transition-colors hover:text-teal-300"
+                      >
+                        Live Demo ↗
+                      </a>
+                    )}
+
+                    {project.linkGithub && (
+                      <a
+                        href={project.linkGithub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-slate-300 transition-colors hover:text-white"
+                      >
+                        GitHub Repository ↗
+                      </a>
+                    )}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVIÇOS SECTION */}
+      <section
+        id="services"
+        className="px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            {t.services.title}
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {t.services.items.map((service, index) => (
+              <article
+                key={`${service.title}-${index}`}
+                className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6"
+              >
+                <h3 className="text-xl font-bold">
+                  {service.title}
+                </h3>
+
+                <p className="mt-3 leading-relaxed text-slate-400">
+                  {service.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      {/* Footer */}
+<footer id="contact" className="border-t border-slate-800 bg-slate-950 py-8 text-slate-400">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+      {/* Direitos Autorais */}
+      <p className="text-sm text-slate-500">
+        © {new Date().getFullYear()} {t.footer.rights}
+      </p>
+
+      {/* Seção de Contato/Redes */}
+      <div className="flex items-center gap-3 text-sm font-medium">
+        <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold mr-1">
+          Contato:
+        </span>
+
+        {t.footer.email && (
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={`mailto:${t.footer.email}`}
+            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
+          >
+            E-mail
+          </a>
+        )}
+
+        {t.footer.linkedin && (
+          <a
+            href={t.footer.linkedin}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            LinkedIn ↗
           </a>
+        )}
+
+        {t.footer.github && (
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={t.footer.github}
             target="_blank"
             rel="noopener noreferrer"
+            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
           >
-            Documentation
+            GitHub ↗
           </a>
-        </div>
-      </main>
+        )}
+      </div>
     </div>
+  </div>
+</footer>
+    </main>
   );
 }
