@@ -21,7 +21,7 @@ Este é o repositório do meu portfólio profissional e bilíngue (PT/EN), desen
 ### 💻 Executando o projeto localmente
 ```bash
 # Clonar o repositório
-git clone [https://github.com/eliasmaia/portfolio.git](https://github.com/eliasmaia/portfolio.git)
+git clone https://github.com/eliasmaia/portfolio.git
 
 # Entrar na pasta do projeto
 cd portfolio
@@ -51,7 +51,7 @@ This is the repository for my personal bilingual portfolio website (EN/PT), buil
 ### 💻 Running Locally
 ```bash
 # Clone the repository
-git clone [https://github.com/eliasmaia/portfolio.git](https://github.com/eliasmaia/portfolio.git)
+git clone https://github.com/eliasmaia/portfolio.git
 
 # Navigate into the project folder
 cd portfolio
