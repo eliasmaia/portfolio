@@ -15,13 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default: "Elias Maia | Engenheiro de Software & Desenvolvedor Web",
-    template: "%s | Elias Maia",
+    template: "%s | Elias Moraes",
   },
   description:
-    "Portfólio profissional de Elias Maia, Engenheiro de Software especializado em desenvolvimento web moderno, arquitetura de software e automação de processos.",
+    "Portfólio profissional de Elias Moraes, Engenheiro de Software especializado em desenvolvimento web moderno, arquitetura de software e automação de processos.",
   keywords: [
     "Engenheiro de Software",
     "Desenvolvedor Web",
+    "Desenvolvedor Backend",
+    "Backend Engineer",
+    "Laravel",
+    "PHP",
+    "Symfony",
     "Next.js",
     "React",
     "TypeScript",
@@ -36,10 +41,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     alternateLocale: "en_US",
-    url: "https://seu-dominio.vercel.app", // Altere quando fizer o deploy
+    url: "https://eliasmoraes.vercel.app",
     title: "Elias Maia | Engenheiro de Software",
     description:
-      "Mais de 6 anos transformando código em soluções de alto impacto. Veja meus projetos e entre em contato.",
+      "Mais de 8 anos transformando código em soluções de alto impacto. Veja meus projetos e entre em contato.",
     siteName: "Elias Maia Portfolio",
   },
   robots: {

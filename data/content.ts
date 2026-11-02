@@ -5,9 +5,53 @@ export const content = {
     hero: {
       role: "Engenheiro de Software & Desenvolvedor Web",
       headline: "Construindo aplicações de alta performance e soluções digitais sob medida.",
-      subtext: "Especialista em desenvolvimento web moderno, arquitetura de software e automação de processos. Mais de 6 anos transformando código em soluções de alto impacto.",
+      subtext: "Especialista em desenvolvimento web moderno, arquitetura de software e automação de processos. Mais de 8 anos transformando código em soluções de alto impacto.",
       ctaProjects: "Ver Projetos",
       ctaContact: "Entrar em Contato",
+    },
+    skills: {
+      title: "Tecnologias & Ferramentas",
+      categories: [
+        {
+          name: "Backend & Frameworks PHP",
+          items: ["PHP", "Laravel", "Symfony", "CakePHP", "Yii2", "Java", "Spring Boot", "Python", "Node.js", "Go"]
+        },
+        {
+          name: "CMS, E-Learning & Relatórios",
+          items: ["WordPress", "CraftCMS", "SCORM", "Jaspersoft Reports"]
+        },
+        {
+          name: "Frontend & Web",
+          items: ["TypeScript", "JavaScript", "React", "Next.js", "Tailwind CSS", "HTML5/CSS3"]
+        },
+        {
+          name: "Arquitetura, Cloud & BPM",
+          items: ["BPMN 2.0", "Camunda BPMS", "AWS", "Terraform", "Docker", "RabbitMQ", "REST APIs", "MySQL", "PostgreSQL", "Snowflake", "Git / GitLab CI", "Linux"]
+        }
+      ]
+    },
+    highlights: {
+      title: "Diferenciais & Idiomas",
+      items: [
+        {
+          title: "Trabalho Remoto Consolidado",
+          description: "Mais de 5 anos de experiência atuando 100% remoto com alta autonomia e entregas orientadas a resultados."
+        },
+        {
+          title: "Times Globais & Multiculturais",
+          description: "Quase 3 anos de colaboração direta em equipes internacionais lidando com múltiplos fusos horários."
+        },
+        {
+          title: "Metodologias Ágeis",
+          description: "Mais de 5 anos vivenciando e aplicando Scrum/Kanban em ciclos contínuos de entrega de software."
+        }
+      ],
+      languagesTitle: "Idiomas",
+      languages: [
+        { name: "Português", level: "Nativo" },
+        { name: "Inglês", level: "Fluente" },
+        { name: "Espanhol", level: "Avançado / Quase fluente" }
+      ]
     },
     services: {
       title: "Como posso ajudar seu negócio",
@@ -42,7 +86,7 @@ export const content = {
           category: "Python / Data & API",
           description: "Aplicação para compilação e visualização de estatísticas personalizadas sobre consumo de filmes utilizando APIs de dados.",
           tech: ["Python", "API Integration", "Data Processing"],
-          linkLive: null,
+          linkLive: "https://movieswrapped.streamlit.app/",
           linkGithub: "https://github.com/eliasmaia/movies_wrapped"
         },
         {
@@ -67,9 +111,53 @@ export const content = {
     hero: {
       role: "Software Engineer & Web Developer",
       headline: "Building high-performance applications and tailored digital solutions.",
-      subtext: "Specialized in modern web development, software architecture, and process automation. Over 6 years of experience engineering impactful software.",
+      subtext: "Specialized in modern web development, software architecture, and process automation. Over 8 years of experience engineering impactful software.",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
+    },
+    skills: {
+      title: "Technologies & Tech Stack",
+      categories: [
+        {
+          name: "Backend & PHP Ecosystem",
+          items: ["PHP", "Laravel", "Symfony", "CakePHP", "Yii2", "Java", "Spring Boot", "Python", "Node.js", "Go"]
+        },
+        {
+          name: "CMS, E-Learning & Reporting",
+          items: ["WordPress", "CraftCMS", "SCORM", "Jaspersoft Reports"]
+        },
+        {
+          name: "Frontend & Web",
+          items: ["TypeScript", "JavaScript", "React", "Next.js", "Tailwind CSS", "HTML5/CSS3"]
+        },
+        {
+          name: "Architecture, Cloud & BPM",
+          items: ["BPMN 2.0", "Camunda BPMS", "AWS", "Terraform", "Docker", "RabbitMQ", "REST APIs", "MySQL", "PostgreSQL", "Snowflake", "Git / GitLab CI", "Linux"]
+        }
+      ]
+    },
+    highlights: {
+      title: "Highlights & Languages",
+      items: [
+        {
+          title: "Solid Remote Experience",
+          description: "Over 5 years of experience working 100% remotely with high autonomy and a results-driven mindset."
+        },
+        {
+          title: "Global & Cross-Cultural Teams",
+          description: "Nearly 3 years of direct collaboration in international teams across multiple time zones."
+        },
+        {
+          title: "Agile Methodologies",
+          description: "Over 5 years applying Scrum/Kanban frameworks in continuous software delivery cycles."
+        }
+      ],
+      languagesTitle: "Languages",
+      languages: [
+        { name: "Portuguese", level: "Native" },
+        { name: "English", level: "Fluent" },
+        { name: "Spanish", level: "Advanced / Upper-Intermediate" }
+      ]
     },
     services: {
       title: "How I can help your business",
@@ -104,7 +192,7 @@ export const content = {
           category: "Python / Data & API",
           description: "Application for compiling and visualizing personalized movie consumption statistics using external data APIs.",
           tech: ["Python", "API Integration", "Data Processing"],
-          linkLive: null,
+          linkLive: "https://movieswrapped.streamlit.app/",
           linkGithub: "https://github.com/eliasmaia/movies_wrapped"
         },
         {

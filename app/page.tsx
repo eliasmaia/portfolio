@@ -85,7 +85,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJETOS SECTION */}
+      {/* Technologies & Stack section */}
+      <section
+        id="skills"
+        className="border-t border-slate-800 bg-slate-900/20 px-6 py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            {t.skills.title}
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {t.skills.categories.map((category, idx) => (
+              <div
+                key={`${category.name}-${idx}`}
+                className="rounded-2xl border border-slate-800 bg-slate-950 p-6 transition-colors hover:border-slate-700"
+              >
+                <h3 className="text-lg font-semibold text-teal-400">
+                  {category.name}
+                </h3>
+
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {category.items.map((tech, tIdx) => (
+                    <span
+                      key={`${tech}-${tIdx}`}
+                      className="rounded-md border border-slate-800 bg-slate-900 px-3 py-1.5 text-sm font-medium text-slate-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
       <section
         id="projects"
         className="border-t border-slate-800 bg-slate-900/40 px-6 py-20"
@@ -155,10 +191,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVIÇOS SECTION */}
+      {/* Highlights & languages section */}
+      <section id="highlights" className="border-t border-slate-800 bg-slate-900/10 px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            {t.highlights.title}
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {t.highlights.items.map((item, index) => (
+              <article
+                key={`${item.title}-${index}`}
+                className="rounded-2xl border border-slate-800 bg-slate-950 p-6 transition-colors hover:border-slate-700"
+              >
+                <h3 className="text-xl font-bold text-teal-400">
+                  {item.title}
+                </h3>
+                <p className="mt-3 leading-relaxed text-slate-400">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          {/* Languages */}
+          <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-950 p-6">
+            <h3 className="text-lg font-semibold text-slate-200 mb-4">
+              {t.highlights.languagesTitle}
+            </h3>
+            <div className="flex flex-wrap gap-4">
+              {t.highlights.languages.map((langItem, idx) => (
+                <div
+                  key={`${langItem.name}-${idx}`}
+                  className="flex items-center gap-2 rounded-lg border border-slate-800 bg-slate-900 px-4 py-2"
+                >
+                  <span className="font-semibold text-teal-400">{langItem.name}:</span>
+                  <span className="text-sm text-slate-300">{langItem.level}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
       <section
         id="services"
-        className="px-6 py-20"
+        className="border-t border-slate-800 px-6 py-20"
       >
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold sm:text-4xl">
@@ -185,55 +264,54 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      {/* Footer */}
-<footer id="contact" className="border-t border-slate-800 bg-slate-950 py-8 text-slate-400">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-      {/* Direitos Autorais */}
-      <p className="text-sm text-slate-500">
-        © {new Date().getFullYear()} {t.footer.rights}
-      </p>
+      <footer id="contact" className="border-t border-slate-800 bg-slate-950 py-8 text-slate-400">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            {/* Direitos Autorais */}
+            <p className="text-sm text-slate-500">
+              © {new Date().getFullYear()} {t.footer.rights}
+            </p>
 
-      {/* Seção de Contato/Redes */}
-      <div className="flex items-center gap-3 text-sm font-medium">
-        <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold mr-1">
-          Contato:
-        </span>
+            {/* Seção de Contato/Redes */}
+            <div className="flex items-center gap-3 text-sm font-medium">
+              <span className="text-xs uppercase tracking-wider text-slate-500 font-semibold mr-1">
+                Contato:
+              </span>
 
-        {t.footer.email && (
-          <a
-            href={`mailto:${t.footer.email}`}
-            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
-          >
-            E-mail
-          </a>
-        )}
+              {t.footer.email && (
+                <a
+                  href={`mailto:${t.footer.email}`}
+                  className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
+                >
+                  E-mail
+                </a>
+              )}
 
-        {t.footer.linkedin && (
-          <a
-            href={t.footer.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
-          >
-            LinkedIn ↗
-          </a>
-        )}
+              {t.footer.linkedin && (
+                <a
+                  href={t.footer.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
+                >
+                  LinkedIn ↗
+                </a>
+              )}
 
-        {t.footer.github && (
-          <a
-            href={t.footer.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
-          >
-            GitHub ↗
-          </a>
-        )}
-      </div>
-    </div>
-  </div>
-</footer>
+              {t.footer.github && (
+                <a
+                  href={t.footer.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 text-slate-300 transition-colors hover:border-teal-500/50 hover:bg-slate-800 hover:text-teal-400"
+                >
+                  GitHub ↗
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
