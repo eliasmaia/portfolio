@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elias Maia — Personal Portfolio & Website
 
-## Getting Started
+[Português](#português) | [English](#english)
 
-First, run the development server:
+---
 
+<a name="português"></a>
+## 🇧🇷 Português
+
+Este é o repositório do meu portfólio profissional e bilíngue (PT/EN), desenvolvido para apresentar meus projetos, competências técnicas e trajetória em Engenharia de Software.
+
+🚀 **Acesse o site no ar:** [eliasmoraes.vercel.app](https://eliasmoraes.vercel.app)
+
+### 🛠️ Tecnologias & Arquitetura
+- **Framework:** Next.js 14 (App Router)
+- **Linguagem:** TypeScript
+- **Estilização:** Tailwind CSS
+- **Internacionalização (i18n):** Padrão Dicionário com desacoplamento total do conteúdo via `content.ts`
+- **Hospedagem & CI/CD:** Vercel
+
+### 💻 Executando o projeto localmente
 ```bash
+# Clonar o repositório
+git clone [https://github.com/eliasmaia/portfolio.git](https://github.com/eliasmaia/portfolio.git)
+
+# Entrar na pasta do projeto
+cd portfolio
+
+# Instalar dependências
+npm install
+
+# Rodar o servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
+<a name="english"></a>
+## 🇺🇸 English
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is the repository for my personal bilingual portfolio website (EN/PT), built to showcase my software engineering projects, technical stack, and professional background.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 **Live Website:** eliasmoraes.vercel.app
 
-## Learn More
+### 🛠️ Tech Stack & Architecture
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Internationalization (i18n):** Dictionary pattern decoupling content from views via content.ts
+- **Deployment & CI/CD:** Vercel
 
-To learn more about Next.js, take a look at the following resources:
+### 💻 Running Locally
+```bash
+# Clone the repository
+git clone [https://github.com/eliasmaia/portfolio.git](https://github.com/eliasmaia/portfolio.git)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Navigate into the project folder
+cd portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start the development server
+npm run dev

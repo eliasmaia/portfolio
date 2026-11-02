@@ -79,7 +79,7 @@ export const content = {
           description: "Landing page médica de alta performance com design responsivo, suporte a Open Graph, SEO avançado e nota 100 no Google Lighthouse.",
           tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Vercel"],
           linkLive: "https://clinicavidaesaude.vercel.app",
-          linkGithub: null
+          linkGithub: "https://github.com/eliasmaia/landing-page-clinica"
         },
         {
           title: "Movies Wrapped",
@@ -185,7 +185,7 @@ export const content = {
           description: "High-performance medical landing page with responsive design, Open Graph support, advanced SEO, and a 100 Lighthouse score.",
           tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Vercel"],
           linkLive: "https://clinicavidaesaude.vercel.app",
-          linkGithub: null
+          linkGithub: "https://github.com/eliasmaia/landing-page-clinica"
         },
         {
           title: "Movies Wrapped",
