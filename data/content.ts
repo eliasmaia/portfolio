@@ -3,9 +3,9 @@ export type Language = 'pt' | 'en';
 export const content = {
   pt: {
     hero: {
-      role: "Engenheiro de Software & Desenvolvedor Web",
-      headline: "Construindo aplicações de alta performance e soluções digitais sob medida.",
-      subtext: "Especialista em desenvolvimento web moderno, arquitetura de software e automação de processos. Mais de 8 anos transformando código em soluções de alto impacto.",
+      role: "Engenheiro de Software & Desenvolvedor Backend",
+      headline: "Desenvolvimento de aplicações web escaláveis e automação de processos.",
+      subtext: "Mais de 7 anos projetando sistemas, APIs e integrações em nuvem com foco em estabilidade, manutenção limpa e eficiência operacional.",
       ctaProjects: "Ver Projetos",
       ctaContact: "Entrar em Contato",
     },
@@ -57,22 +57,30 @@ export const content = {
       title: "Como posso ajudar seu negócio",
       items: [
         {
-          title: "Landing Pages de Alta Conversão",
-          description: "Páginas otimizadas para velocidade, SEO impecável e foco total em transformar visitantes em clientes."
+          title: "Landing Pages & Páginas Comerciais",
+          description: "Páginas leves, responsivas e estruturadas para SEO técnico e carregamento rápido."
         },
         {
-          title: "Sites Institucionais & Web Apps",
-          description: "Plataformas web completas, modernas e responsivas, construídas com as tecnologias mais recentes do mercado."
+          title: "Sistemas Web & Aplicações Sob Medida",
+          description: "Desenvolvimento de plataformas completas, painéis administrativos e aplicações web estruturadas para crescer."
         },
         {
           title: "Automação & Integrações",
-          description: "Otimização de processos internos, consumo de APIs e integração de sistemas para acelerar sua operação."
+          description: "Conexão entre sistemas via APIs, rotinas automatizadas e otimização de fluxos internos."
         }
       ]
     },
     projects: {
       title: "Projetos em Destaque",
       items: [
+        {
+          title: "Vasco News Engine",
+          category: "Backend / Go & Cloud",
+          description: "Pipeline automatizado e serverless para coleta concorrente, filtragem e entrega em tempo real de notícias no Telegram, utilizando Goroutines, Turso (libSQL) e GitHub Actions.",
+          tech: ["Go (Golang)", "Turso (libSQL)", "GitHub Actions", "Telegram API"],
+          linkLive: "https://t.me/vascaonews",
+          linkGithub: "https://github.com/eliasmaia/vasco-news-engine"
+        },
         {
           title: "Clínica Vida & Saúde",
           category: "Web / Landing Page",
@@ -109,9 +117,9 @@ export const content = {
   },
   en: {
     hero: {
-      role: "Software Engineer & Web Developer",
-      headline: "Building high-performance applications and tailored digital solutions.",
-      subtext: "Specialized in modern web development, software architecture, and process automation. Over 8 years of experience engineering impactful software.",
+      role: "Senior Software Engineer & Backend Developer",
+      headline: "Building scalable web applications and automated backend systems.",
+      subtext: "7+ years designing software architecture, APIs, and cloud integrations focused on reliability, clean code, and operational efficiency.",
       ctaProjects: "View Projects",
       ctaContact: "Get in Touch",
     },
@@ -163,22 +171,30 @@ export const content = {
       title: "How I can help your business",
       items: [
         {
-          title: "High-Converting Landing Pages",
-          description: "Pages optimized for speed, flawless SEO, and conversion-focused design to turn visitors into active leads."
+          title: "Landing Pages & Commercial Sites",
+          description: "Fast, responsive pages built with clean structure and technical SEO best practices."
         },
         {
-          title: "Institutional Websites & Web Apps",
-          description: "Complete, modern, and responsive web platforms built with cutting-edge tech stacks."
+          title: "Custom Web Apps & Platforms",
+          description: "End-to-end web systems, dashboards, and backend architectures designed for long-term maintainability."
         },
         {
-          title: "Automation & Integrations",
-          description: "Internal process optimization, API integrations, and system architecture to streamline business operations."
+          title: "Automation & API Integrations",
+          description: "System-to-system integrations, background workers, and workflow automation to eliminate manual bottlenecks."
         }
       ]
     },
     projects: {
       title: "Featured Projects",
       items: [
+        {
+          title: "Vasco News Engine",
+          category: "Backend / Go & Cloud",
+          description: "Serverless automated pipeline for concurrent scraping, deduplication, and real-time Telegram news delivery, built with Go Goroutines, Turso (libSQL), and GitHub Actions.",
+          tech: ["Go (Golang)", "Turso (libSQL)", "GitHub Actions", "Telegram API"],
+          linkLive: "https://t.me/vascaonews",
+          linkGithub: "https://github.com/eliasmaia/vasco-news-engine"
+        },
         {
           title: "Vida & Saúde Clinic",
           category: "Web / Landing Page",
